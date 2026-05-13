@@ -175,7 +175,7 @@ fitlane candidates "senior python" --json \
 
 The CLI is a thin client over the same API that powers [fitlaneai.com](https://fitlaneai.com). The web app gives you the full experience — candidate profiles with privacy-mode toggles, a built-in hiring chat, multi-stakeholder pipelines. The CLI gives you the 80% you can run in 90 seconds, scripted, from your terminal.
 
-If you want to *write* the prompts that power match explanations, browse the companion repo: **[fitlane-cookbook](https://github.com/genisaretskiy/fitlane-cookbook)** — open-source prompts and automation scripts for IT recruiting.
+If you want to *write* the prompts that power match explanations, browse the companion repo: **[fitlane-cookbook](https://github.com/anatolygridasov/fitlane-cookbook)** — open-source prompts and automation scripts for IT recruiting.
 
 ---
 
@@ -201,7 +201,7 @@ PRs welcome.
 ## Contributing
 
 ```bash
-git clone https://github.com/genisaretskiy/fitlane-cli.git
+git clone https://github.com/anatolygridasov/fitlane-cli.git
 cd fitlane-cli
 npm install
 node bin/fitlane.js --help
