@@ -1,0 +1,49 @@
+{
+  "name": "fitlane",
+  "version": "0.1.0",
+  "description": "Fitlane CLI — search IT candidates and jobs from your terminal. Powered by Fitlane AI (https://fitlaneai.com).",
+  "type": "module",
+  "bin": {
+    "fitlane": "./bin/fitlane.js"
+  },
+  "main": "./src/index.js",
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "node bin/fitlane.js",
+    "test": "node --test test/*.test.js"
+  },
+  "keywords": [
+    "fitlane",
+    "recruiting",
+    "hiring",
+    "it-talent",
+    "cli",
+    "ai",
+    "candidates",
+    "jobs"
+  ],
+  "homepage": "https://fitlaneai.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/genisaretskiy/fitlane-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/genisaretskiy/fitlane-cli/issues"
+  },
+  "author": "Fitlane AI",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "picocolors": "^1.1.1",
+    "prompts": "^2.4.2",
+    "ora": "^8.1.1"
+  }
+}
