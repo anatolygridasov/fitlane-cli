@@ -171,6 +171,22 @@ fitlane candidates "senior python" --json \
 
 ---
 
+## Multilingual queries
+
+Every `<query>` argument is free-form text. The Fitlane ranking engine accepts the same recruiter brief in English, Spanish, German, Ukrainian, and Russian — type the role the way you would say it out loud, in your own language.
+
+```bash
+fitlane candidates "Senior Backend Go, Series A fintech, Berlin hybrid, high-load >1k RPS"
+fitlane candidates "Senior iOS, SwiftUI + TCA, EdTech 5M MAU, remoto desde UE/LATAM"
+fitlane candidates "Senior DevOps als erster DevOps-Hire, EKS-Migration, Remote, bis 110.000 €"
+fitlane candidates "Senior React-розробник з 5+ роками, Next.js 14, віддалено, до $4 500"
+fitlane candidates "Senior PHP-разработчик, Laravel 10–11, DDD/Hexagonal, удалёнка, 300k+"
+```
+
+For a curated library of one-prompt searches in all five languages, see the [multilingual search recipe](https://github.com/anatolygridasov/fitlane-cookbook/blob/main/prompts/09-multilingual-search.md) in the companion cookbook.
+
+---
+
 ## How it fits with the platform
 
 The CLI is a thin client over the same API that powers [fitlaneai.com](https://fitlaneai.com). The web app gives you the full experience — candidate profiles with privacy-mode toggles, a built-in hiring chat, multi-stakeholder pipelines. The CLI gives you the 80% you can run in 90 seconds, scripted, from your terminal.
