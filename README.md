@@ -1,6 +1,6 @@
 # Fitlane CLI
 
-> Search IT candidates and jobs from your terminal. Powered by [**Fitlane AI**](https://fitlaneai.com).
+> **One command. Human-readable results.** Search IT candidates and jobs from your terminal — powered by [**Fitlane AI**](https://fitlaneai.com).
 
 ```
 $ fitlane candidates "senior react remote eu" --limit 3
@@ -11,6 +11,8 @@ c_002  Senior Frontend Engineer  (senior, 6y)
   salary   7800 EUR/month
   signal   Led design system rollout across 6 internal products
 ```
+
+**That is the whole interaction.** One command, ranked candidates, plain-text output you can read at a glance — no JSON to parse, no filter chips to click, no dashboard to open. Pipe it to `grep`, paste it into Slack, screenshot it for the hiring manager.
 
 `fitlane` is an open-source command-line client for the Fitlane AI hiring platform. It is designed for recruiters who live in the terminal (or want to): you can find candidates, browse open jobs, and get a recruiter-grade explanation of *why* a candidate fits a job — in under 90 seconds, without opening a browser.
 
