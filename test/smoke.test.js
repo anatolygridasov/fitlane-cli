@@ -5,7 +5,7 @@ import { mockCandidates, mockJobs, mockMatch } from '../src/lib/mock.js';
 test('mockCandidates returns results for a typical query', () => {
   const { results } = mockCandidates({ query: 'senior python backend', limit: 5 });
   assert.ok(results.length > 0, 'expected at least one candidate');
-  assert.ok(results.every((c) => c.id.startsWith('c_')), 'ids should be candidate ids');
+  assert.ok(results.every((c) => typeof c.id === 'string' && c.id.length > 0), 'candidate ids should be non-empty strings');
 });
 
 test('mockCandidates respects --seniority filter', () => {
@@ -22,11 +22,11 @@ test('mockCandidates respects --stack filter', () => {
 test('mockJobs returns results for a stack query', () => {
   const { results } = mockJobs({ query: 'go kubernetes', limit: 5 });
   assert.ok(results.length > 0);
-  assert.ok(results.every((j) => j.id.startsWith('j_')));
+  assert.ok(results.every((j) => typeof j.id === 'string' && j.id.length > 0));
 });
 
 test('mockMatch returns a deterministic score for known IDs', () => {
-  const r = mockMatch('c_001', 'j_001');
+  const r = mockMatch('marta-kowalska', 'lumeris-backend');
   assert.equal(typeof r.score, 'number');
   assert.ok(r.score >= 0 && r.score <= 100);
   assert.ok(Array.isArray(r.fits) && r.fits.length > 0);
@@ -35,6 +35,6 @@ test('mockMatch returns a deterministic score for known IDs', () => {
 });
 
 test('mockMatch throws for unknown IDs with helpful message', () => {
-  assert.throws(() => mockMatch('c_999', 'j_001'), /candidate/);
-  assert.throws(() => mockMatch('c_001', 'j_999'), /job/);
+  assert.throws(() => mockMatch('no-such-candidate', 'lumeris-backend'), /candidate/);
+  assert.throws(() => mockMatch('marta-kowalska', 'no-such-job'), /job/);
 });

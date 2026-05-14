@@ -1,6 +1,6 @@
 const CANDIDATES = [
   {
-    id: 'c_001',
+    id: 'marta-kowalska',
     headline: 'Senior Backend Engineer',
     seniority: 'senior',
     years: 7,
@@ -10,7 +10,7 @@ const CANDIDATES = [
     highlight: 'Scaled fintech payments service from 8k to 65k RPS',
   },
   {
-    id: 'c_002',
+    id: 'julian-becker',
     headline: 'Senior Frontend Engineer',
     seniority: 'senior',
     years: 6,
@@ -20,7 +20,7 @@ const CANDIDATES = [
     highlight: 'Led design system rollout across 6 internal products',
   },
   {
-    id: 'c_003',
+    id: 'tiago-almeida',
     headline: 'Staff Backend Engineer',
     seniority: 'staff',
     years: 11,
@@ -30,7 +30,7 @@ const CANDIDATES = [
     highlight: 'Cut p99 latency 60% via Postgres partitioning at scale',
   },
   {
-    id: 'c_004',
+    id: 'nino-beridze',
     headline: 'Middle Full-Stack Engineer',
     seniority: 'middle',
     years: 4,
@@ -40,7 +40,7 @@ const CANDIDATES = [
     highlight: 'Shipped MVP-to-Series-A platform as second engineer',
   },
   {
-    id: 'c_005',
+    id: 'lotte-van-dijk',
     headline: 'Senior ML Engineer',
     seniority: 'senior',
     years: 8,
@@ -50,7 +50,7 @@ const CANDIDATES = [
     highlight: 'Built ranking pipeline serving 40M predictions/day',
   },
   {
-    id: 'c_006',
+    id: 'petr-novak',
     headline: 'Senior DevOps / SRE',
     seniority: 'senior',
     years: 9,
@@ -60,7 +60,7 @@ const CANDIDATES = [
     highlight: 'Migrated 80-service estate to Kubernetes with zero downtime',
   },
   {
-    id: 'c_007',
+    id: 'stefan-jovanovic',
     headline: 'Junior Backend Engineer',
     seniority: 'junior',
     years: 1,
@@ -70,7 +70,7 @@ const CANDIDATES = [
     highlight: 'Self-taught, 2 production projects, strong open-source contributions',
   },
   {
-    id: 'c_008',
+    id: 'kristjan-saar',
     headline: 'Senior iOS Engineer',
     seniority: 'senior',
     years: 9,
@@ -83,7 +83,7 @@ const CANDIDATES = [
 
 const JOBS = [
   {
-    id: 'j_001',
+    id: 'lumeris-backend',
     title: 'Senior Backend Engineer',
     company: 'Lumeris',
     domain: 'B2B payments',
@@ -94,7 +94,7 @@ const JOBS = [
     location: 'Remote, CET overlap',
   },
   {
-    id: 'j_002',
+    id: 'brigantia-frontend',
     title: 'Senior Frontend Engineer',
     company: 'Brigantia',
     domain: 'B2B fintech analytics',
@@ -105,7 +105,7 @@ const JOBS = [
     location: 'Remote, CET overlap',
   },
   {
-    id: 'j_003',
+    id: 'skywell-staff-backend',
     title: 'Staff Backend Engineer',
     company: 'Skywell',
     domain: 'real-time logistics',
@@ -116,7 +116,7 @@ const JOBS = [
     location: 'Remote EU',
   },
   {
-    id: 'j_004',
+    id: 'pinepath-fullstack',
     title: 'Full-Stack Engineer (Founding)',
     company: 'Pinepath',
     domain: 'AI-native CRM',
@@ -127,7 +127,7 @@ const JOBS = [
     location: 'Remote, any timezone',
   },
   {
-    id: 'j_005',
+    id: 'quantcrest-ml',
     title: 'Senior ML Engineer',
     company: 'Quantcrest',
     domain: 'ad-tech ranking',
@@ -138,7 +138,7 @@ const JOBS = [
     location: 'Remote EU',
   },
   {
-    id: 'j_006',
+    id: 'korvus-devops',
     title: 'Senior DevOps Engineer',
     company: 'Korvus',
     domain: 'B2B SaaS infrastructure',
@@ -184,7 +184,7 @@ export function mockMatch(candidateId, jobId) {
   const candidate = CANDIDATES.find((c) => c.id === candidateId);
   const job = JOBS.find((j) => j.id === jobId);
   if (!candidate || !job) {
-    throw new Error(`Unknown ${!candidate ? 'candidate' : 'job'} id. In mock mode, valid IDs are c_001..c_008 and j_001..j_006.`);
+    throw new Error(`Unknown ${!candidate ? 'candidate' : 'job'} id. In mock mode, valid candidate IDs are ${CANDIDATES.map((c) => c.id).join(', ')} and valid job IDs are ${JOBS.map((j) => j.id).join(', ')}.`);
   }
 
   const stackOverlap = job.must_have_stack.filter((s) => candidate.stack.includes(s));

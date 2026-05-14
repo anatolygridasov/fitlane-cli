@@ -5,7 +5,7 @@
 ```
 $ fitlane candidates "senior react remote eu" --limit 3
 
-c_002  Senior Frontend Engineer  (senior, 6y)
+julian-becker  Senior Frontend Engineer  (senior, 6y)
   stack    typescript, next.js, react, tailwind
   location Berlin, DE · remote-ok
   salary   7800 EUR/month
@@ -55,7 +55,7 @@ fitlane candidates "senior backend python remote"
 fitlane jobs "backend python b2b saas"
 
 # 5. Explain a match
-fitlane match c_001 j_001
+fitlane match marta-kowalska lumeris-backend
 ```
 
 That is the whole product surface. Five commands, one minute, real shape of the answer.
@@ -124,7 +124,7 @@ The killer command. Given a candidate ID and a job ID, returns:
 - the single most useful question to ask on the screening call.
 
 ```bash
-$ fitlane match c_001 j_001
+$ fitlane match marta-kowalska lumeris-backend
 
 Match score: 84 / 100
 
@@ -146,10 +146,10 @@ Recruiter next step
 
 `fitlane` runs in **mock mode** out of the box. You get curated sample candidates and jobs so you can try every command, write scripts, and demo to colleagues *before* the production API is live.
 
-Valid mock IDs:
+Valid mock IDs are human-readable slugs:
 
-- Candidates: `c_001` to `c_008`
-- Jobs: `j_001` to `j_006`
+- Candidates: `marta-kowalska`, `julian-becker`, `tiago-almeida`, `nino-beridze`, `lotte-van-dijk`, `petr-novak`, `stefan-jovanovic`, `kristjan-saar`
+- Jobs: `lumeris-backend`, `brigantia-frontend`, `skywell-staff-backend`, `pinepath-fullstack`, `quantcrest-ml`, `korvus-devops`
 
 When your live API key arrives:
 
